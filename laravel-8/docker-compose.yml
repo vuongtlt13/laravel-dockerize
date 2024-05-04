@@ -1,0 +1,23 @@
+version: '3'
+services:
+  app:
+    image: laravel8
+    command: ["sleep", "infinity"]
+    ports:
+      - "8080:8080"
+    env_file:
+      - example-app/.env
+  
+  queue:
+    image: laravel8
+    environment:
+      - CONTAINER_ROLE=queue
+    env_file:
+      - example-app/.env
+  
+  scheduler:
+    image: laravel8
+    environment:
+      - CONTAINER_ROLE=scheduler
+    env_file:
+      - example-app/.env
