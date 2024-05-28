@@ -1,4 +1,4 @@
-FROM vuongtlt13/nginx-php-fpm:8.0
+FROM vuongtlt13/nginx-php-fpm:7.4
 
 # change to your timezone
 ENV TZ=Asia/Saigon
