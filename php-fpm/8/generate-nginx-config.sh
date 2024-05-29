@@ -48,11 +48,11 @@ echo "server {
         gzip_static on;
     }
     
-    location ~ \.css {
+    location ~ \.css\$ {
         add_header  Content-Type    text/css;
     }
     
-    location ~ \.js {
+    location ~ \.js\$ {
         add_header  Content-Type    application/x-javascript;
     }
 
